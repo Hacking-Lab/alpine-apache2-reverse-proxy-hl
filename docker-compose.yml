@@ -1,4 +1,3 @@
-version: '3.6'
 
 services:
   alpine-apache2-reverse-proxy-hl:
@@ -10,3 +9,5 @@ services:
     ports:
       - 80:80
       - 443:443
+    volumes:
+      - ./config/proxy-html.conf:/etc/apache2/conf-frontend.d/proxy-html.conf
